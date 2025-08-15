@@ -51,11 +51,26 @@ The project uses Tailwind CSS. To build the necessary stylesheet, run one of the
   npm run build
   
   ```
+6. Install optional dev dependencies:
+For a better development experience, you can install nodemon to automatically restart the server whenever you make changes to the code.
 
-6. **Start the server:**
+  ```
+  npm install nodemon --save-dev
+
+  ```
+
+7. **Start the server:**
+
+* **For development: The dev script will use nodemon to automatically restart the server.:**
+
+```
+npm run dev
 
 ```
 
+* **For production::**
+
+```
 npm start
 
 ```
