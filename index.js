@@ -113,11 +113,11 @@ const extractText = (resp) => {
 app.post('/api/chat', async (req, res) => {
     try {
         const {messages} = req.body;
+        console.log({messages})
         if (!Array.isArray(messages)) throw new Error("messages must be an array");
 
-
         const contents = messages.map(msg => ({
-            role: msg.role,
+            role: msg.role === 'assistant' ? 'model' : msg.role,
             parts: [{
                 text: msg.content
             }]
